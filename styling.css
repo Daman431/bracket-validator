@@ -1,7 +1,8 @@
-body{
-	text-align: center;
+.jumbotron{
+	height: 190px;
 }
-textarea{
-	text-align: left;
-	padding-left: 10px;
+#alertArea{
+	position: absolute;
+	margin-top: -60px;
+	margin-left: 100px;
 }

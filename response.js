@@ -65,10 +65,65 @@ function buttonClick() {
 	var bracesList = prefix(fileString);
 	var checkBraces = bracketValidator(bracesList);	
 	if(checkBraces){
-		alert("Braces are Balanced!");
+		if(fileString.length === 0){
+			//Alert
+		var successAlert = document.createElement('div');
+		var node = document.createTextNode("No code provided!");
+		successAlert.setAttribute("class","alert alert-warning alert-dismissible fade show");
+		successAlert.setAttribute("id","alert-area");
+		successAlert.appendChild(node);
+
+		//close button
+		var closeButton = document.createElement('button');
+		var crossIcon = document.createTextNode("x");
+		closeButton.setAttribute("type","button");
+		closeButton.setAttribute("class","close");
+		closeButton.setAttribute("data-dismiss","alert");
+		closeButton.appendChild(crossIcon);
+
+		//write elements in html
+		document.getElementById("alertArea").appendChild(successAlert);
+		document.getElementById("alert-area").appendChild(closeButton);
+		}
+		else{
+		//Alert
+		var successAlert = document.createElement('div');
+		var node = document.createTextNode("Success!");
+		successAlert.setAttribute("class","alert alert-success alert-dismissible fade show");
+		successAlert.setAttribute("id","alert-area");
+		successAlert.appendChild(node);
+
+		//close button
+		var closeButton = document.createElement('button');
+		var crossIcon = document.createTextNode("x");
+		closeButton.setAttribute("type","button");
+		closeButton.setAttribute("class","close");
+		closeButton.setAttribute("data-dismiss","alert");
+		closeButton.appendChild(crossIcon);
+
+		//write elements in html
+		document.getElementById("alertArea").appendChild(successAlert);
+		document.getElementById("alert-area").appendChild(closeButton);
+		}
 	}
 	else{
-		alert("ERROR!")
+		var errorAlert = document.createElement('div');
+		var node = document.createTextNode("Bracket missing!");
+		errorAlert.setAttribute("class","alert alert-danger alert-dismissible fade show");
+		errorAlert.setAttribute("id","alert-area");
+		errorAlert.appendChild(node);
+
+		//close button
+		var closeButton = document.createElement('button');
+		var crossIcon = document.createTextNode("x");
+		closeButton.setAttribute("type","button");
+		closeButton.setAttribute("class","close");
+		closeButton.setAttribute("data-dismiss","alert");
+		closeButton.appendChild(crossIcon);
+
+		//write elements in html
+		document.getElementById("alertArea").appendChild(errorAlert);
+		document.getElementById("alert-area").appendChild(closeButton);
 	}
 }
 

@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  	crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="styling.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
 	<title>Validator</title>
 </head>
 <body>
-Paste your code here!
+	<div class="jumbotron">
+		<h1>Bracket Validator</h1>
+		<p>Welcome,This is an online compiler for checking any braces misplacement!</p>
+	</div>
 <br>
-<textarea id="file" rows = "35" cols = "100">
-
-</textarea>
+<div class="mt-md-0 m-3 form-group">
+	  <label for="comment">Your Code:</label>
+	  <textarea placeholder="Welcome" class="form-control" rows="10" cols="10" id="file"></textarea>
+</div>
 <br>
-<button onclick="buttonClick()">Submit</button>
+<button type="button" id="butt" class=" mt-md-0 m-3 btn btn-success" onclick="buttonClick()">Submit</button>
+<div id="alertArea" class="container">
+	
+</div>
 <script type="text/javascript" src="response.js"></script>
 </body>
 </html>
