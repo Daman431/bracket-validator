@@ -60,7 +60,15 @@ function bracketValidator(file) {
 				return true;
 			}	
 }
-var file = "{hello}doinggood([[])"
-var bracesList = prefix(file);
-var checkBraces = bracketValidator(bracesList);
-console.log(checkBraces);
+function buttonClick() {
+	var fileString = document.getElementById('file').value;
+	var bracesList = prefix(fileString);
+	var checkBraces = bracketValidator(bracesList);	
+	if(checkBraces){
+		alert("Braces are Balanced!");
+	}
+	else{
+		alert("ERROR!")
+	}
+}
+
