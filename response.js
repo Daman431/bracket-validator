@@ -23,22 +23,22 @@ function prefix(file) {
 
 
 
-function bracketValidator(file) {
+function bracketValidator(bracesList) {
 	var list = [];
 
-	for(i=0;i<file.length;i++){
-		switch(file[i]){
-			case '{': list.push(file[i]);
+	for(i=0;i<bracesList.length;i++){
+		switch(bracesList[i]){
+			case '{': list.push(bracesList[i]);
 			break;
-			case '[':list.push(file[i]);
+			case '[':list.push(bracesList[i]);
 			break;
-			case '(':list.push(file[i]);
+			case '(':list.push(bracesList[i]);
 			break;
 		}
 		if(list.length === 0){
 			return false;
 		}
-		switch(file[i]){
+		switch(bracesList[i]){
 			case '}':if(list[list.length-1] === '(' || list[list.length-1] === '['){
 					 	return false;
 					 }
